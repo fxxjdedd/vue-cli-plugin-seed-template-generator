@@ -1,6 +1,6 @@
 {
   "name": "vue-cli-plugin-seed-template-generator",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "种子仓库生成器",
   "main": "index.js",
   "scripts": {
