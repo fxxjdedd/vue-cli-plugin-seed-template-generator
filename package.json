@@ -1,0 +1,31 @@
+{
+  "name": "vue-cli-plugin-seed-template-generator",
+  "version": "0.0.1",
+  "description": "种子仓库生成器",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fxxjdedd/vue-cli-plugin-seed-template-generator.git"
+  },
+  "keywords": [
+    "vue"
+  ],
+  "author": "fxxjdedd@gmail.com",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fxxjdedd/vue-cli-plugin-seed-template-generator/issues"
+  },
+  "homepage": "https://github.com/fxxjdedd/vue-cli-plugin-seed-template-generator#readme",
+  "dependencies": {
+    "glob": "^7.1.6"
+  },
+  "devDependencies": {
+    "eslint": "^7.1.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.3",
+    "prettier": "^2.0.5"
+  }
+}
