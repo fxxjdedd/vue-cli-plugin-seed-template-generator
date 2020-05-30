@@ -44,7 +44,7 @@ module.exports = (api, options = {}) => {
 
   replaceHtmlTemplateSymbols()
 
-  // https://github.com/vuejs/vue-cli/pull/5537, 等这个pr通过了，这行就可以删了
+  // https://github.com/vuejs/vue-cli/pull/5537, When this pr is passed, this line can be deleted
   replaceDotFilePrefix()
 
   api.render('./template', {
