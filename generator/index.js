@@ -32,14 +32,14 @@ function replaceDotFilePrefix() {
 }
 
 module.exports = (api, options = {}) => {
-  const { url } = options
+  const { url, branch } = options
   if (!url) {
     console.error('url is required')
     process.exit(1)
   }
   const templateDir = path.resolve(__dirname, 'template')
   execSync(`rm -rf ${templateDir}`)
-  execSync(`git clone ${url} ${templateDir}`)
+  execSync(`git clone -b ${branch} ${url} ${templateDir}`)
   execSync(`rm -rf ${templateDir}/.git`)
 
   replaceHtmlTemplateSymbols()

@@ -38,5 +38,12 @@ declare preset='{
 vue create --inlinePreset $preset <your-project-name>
 ```
 
+## Avaliable Parameters
+| 名称   | 默认值 |
+| :----- | :----- |
+| url    | -      |
+| branch | master |
+
+
 ## License
 MIT
