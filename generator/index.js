@@ -60,9 +60,13 @@ module.exports = (api, options = {}) => {
   // https://github.com/vuejs/vue-cli/pull/5537, When this pr is passed, this line can be deleted
   replaceDotFilePrefix()
 
-  const seedTemplatePackage = JSON.parse(
-    fs.readFileSync(path.resolve(templateDir, 'package.json'), 'utf-8'),
-  )
+  const seedTemplatePackage = {
+    // 这一行要放到最前面：
+    // 1. 不会影响种子仓库原本的package.json
+    // 2. 避免vue-cli自动生成的browserslist字段和种子仓库自身的.browserslistrc冲突
+    browserslist: undefined,
+    ...JSON.parse(fs.readFileSync(path.resolve(templateDir, 'package.json'), 'utf-8')),
+  }
 
   api.extendPackage(seedTemplatePackage)
 
