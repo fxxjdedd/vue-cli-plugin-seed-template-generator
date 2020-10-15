@@ -45,7 +45,7 @@ function removeVueCliGeneratedFiles(files) {
 }
 
 module.exports = (api, options = {}) => {
-  const { url, branch, monorepo = false } = options
+  const { url, branch } = options
   if (!url) {
     console.error('url is required')
     process.exit(1)
@@ -77,10 +77,6 @@ module.exports = (api, options = {}) => {
   api.postProcessFiles(files => {
     // 另外一个问题，即使是bare模式，vue-cli依然会生成一些文件，我们要把它删掉，保证生成的文件都是来自于种子仓库
     removeVueCliGeneratedFiles(files)
-    // 如果是monorepo，直接把src目录删掉
-    if (monorepo) {
-      execSync(`rm -rf ${templateDir}/src`)
-    }
   })
 }
 
